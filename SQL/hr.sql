@@ -5,7 +5,7 @@ USE hr;
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 --
--- 테이블 구조 `HR_COUNTRIES`
+-- 테이블 구조 `COUNTRIES`
 --
 
 CREATE TABLE IF NOT EXISTS `COUNTRIES` (
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS `COUNTRIES` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 테이블의 덤프 데이터 `HR_COUNTRIES`
+-- 테이블의 덤프 데이터 `COUNTRIES`
 --
 
 INSERT INTO `COUNTRIES` (`COUNTRY_ID`, `COUNTRY_NAME`, `REGION_ID`) VALUES
@@ -50,7 +50,7 @@ INSERT INTO `COUNTRIES` (`COUNTRY_ID`, `COUNTRY_NAME`, `REGION_ID`) VALUES
 -- --------------------------------------------------------
 
 --
--- 테이블 구조 `HR_DEPARTMENTS`
+-- 테이블 구조 `DEPARTMENTS`
 --
 
 CREATE TABLE IF NOT EXISTS `DEPARTMENTS` (
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `DEPARTMENTS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 테이블의 덤프 데이터 `HR_DEPARTMENTS`
+-- 테이블의 덤프 데이터 `DEPARTMENTS`
 --
 
 INSERT INTO `DEPARTMENTS` (`DEPARTMENT_ID`, `DEPARTMENT_NAME`, `MANAGER_ID`, `LOCATION_ID`) VALUES
@@ -99,7 +99,7 @@ INSERT INTO `DEPARTMENTS` (`DEPARTMENT_ID`, `DEPARTMENT_NAME`, `MANAGER_ID`, `LO
 -- --------------------------------------------------------
 
 --
--- 테이블 구조 `HR_EMPLOYEES`
+-- 테이블 구조 `EMPLOYEES`
 --
 
 CREATE TABLE IF NOT EXISTS `EMPLOYEES` (
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS `EMPLOYEES` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 테이블의 덤프 데이터 `HR_EMPLOYEES`
+-- 테이블의 덤프 데이터 `EMPLOYEES`
 --
 
 INSERT INTO `EMPLOYEES` (`EMPLOYEE_ID`, `FIRST_NAME`, `LAST_NAME`, `EMAIL`, `PHONE_NUMBER`, `HIRE_DATE`, `JOB_ID`, `SALARY`, `COMMISSION_PCT`, `MANAGER_ID`, `DEPARTMENT_ID`) VALUES
@@ -171,41 +171,41 @@ INSERT INTO `EMPLOYEES` (`EMPLOYEE_ID`, `FIRST_NAME`, `LAST_NAME`, `EMAIL`, `PHO
 (142, 'Curtis', 'Davies', 'CDAVIES', '650.121.2994', '1997-01-29', 'ST_CLERK', 3100, NULL, 124, 50),
 (143, 'Randall', 'Matos', 'RMATOS', '650.121.2874', '1998-03-15', 'ST_CLERK', 2600, NULL, 124, 50),
 (144, 'Peter', 'Vargas', 'PVARGAS', '650.121.2004', '1998-07-09', 'ST_CLERK', 2500, NULL, 124, 50),
-(145, 'John', 'Russell', 'JRUSSEL', '011.44.1344.429268', '1996-10-01', 'SA_MAN', 14000, 0, 100, 80),
-(146, 'Karen', 'Partners', 'KPARTNER', '011.44.1344.467268', '1997-01-05', 'SA_MAN', 13500, 0, 100, 80),
-(147, 'Alberto', 'Errazuriz', 'AERRAZUR', '011.44.1344.429278', '1997-03-10', 'SA_MAN', 12000, 0, 100, 80),
-(148, 'Gerald', 'Cambrault', 'GCAMBRAU', '011.44.1344.619268', '1999-10-15', 'SA_MAN', 11000, 0, 100, 80),
-(149, 'Eleni', 'Zlotkey', 'EZLOTKEY', '011.44.1344.429018', '2000-01-29', 'SA_MAN', 10500, 0, 100, 80),
-(150, 'Peter', 'Tucker', 'PTUCKER', '011.44.1344.129268', '1997-01-30', 'SA_REP', 10000, 0, 145, 80),
-(151, 'David', 'Bernstein', 'DBERNSTE', '011.44.1344.345268', '1997-03-24', 'SA_REP', 9500, 0, 145, 80),
-(152, 'Peter', 'Hall', 'PHALL', '011.44.1344.478968', '1997-08-20', 'SA_REP', 9000, 0, 145, 80),
-(153, 'Christopher', 'Olsen', 'COLSEN', '011.44.1344.498718', '1998-03-30', 'SA_REP', 8000, 0, 145, 80),
-(154, 'Nanette', 'Cambrault', 'NCAMBRAU', '011.44.1344.987668', '1998-12-09', 'SA_REP', 7500, 0, 145, 80),
-(155, 'Oliver', 'Tuvault', 'OTUVAULT', '011.44.1344.486508', '1999-11-23', 'SA_REP', 7000, 0, 145, 80),
-(156, 'Janette', 'King', 'JKING', '011.44.1345.429268', '1996-01-30', 'SA_REP', 10000, 0, 146, 80),
-(157, 'Patrick', 'Sully', 'PSULLY', '011.44.1345.929268', '1996-03-04', 'SA_REP', 9500, 0, 146, 80),
-(158, 'Allan', 'McEwen', 'AMCEWEN', '011.44.1345.829268', '1996-08-01', 'SA_REP', 9000, 0, 146, 80),
-(159, 'Lindsey', 'Smith', 'LSMITH', '011.44.1345.729268', '1997-03-10', 'SA_REP', 8000, 0, 146, 80),
-(160, 'Louise', 'Doran', 'LDORAN', '011.44.1345.629268', '1997-12-15', 'SA_REP', 7500, 0, 146, 80),
-(161, 'Sarath', 'Sewall', 'SSEWALL', '011.44.1345.529268', '1998-11-03', 'SA_REP', 7000, 0, 146, 80),
-(162, 'Clara', 'Vishney', 'CVISHNEY', '011.44.1346.129268', '1997-11-11', 'SA_REP', 10500, 0, 147, 80),
-(163, 'Danielle', 'Greene', 'DGREENE', '011.44.1346.229268', '1999-03-19', 'SA_REP', 9500, 0, 147, 80),
-(164, 'Mattea', 'Marvins', 'MMARVINS', '011.44.1346.329268', '2000-01-24', 'SA_REP', 7200, 0, 147, 80),
-(165, 'David', 'Lee', 'DLEE', '011.44.1346.529268', '2000-02-23', 'SA_REP', 6800, 0, 147, 80),
-(166, 'Sundar', 'Ande', 'SANDE', '011.44.1346.629268', '2000-03-24', 'SA_REP', 6400, 0, 147, 80),
-(167, 'Amit', 'Banda', 'ABANDA', '011.44.1346.729268', '2000-04-21', 'SA_REP', 6200, 0, 147, 80),
-(168, 'Lisa', 'Ozer', 'LOZER', '011.44.1343.929268', '1997-03-11', 'SA_REP', 11500, 0, 148, 80),
-(169, 'Harrison', 'Bloom', 'HBLOOM', '011.44.1343.829268', '1998-03-23', 'SA_REP', 10000, 0, 148, 80),
-(170, 'Tayler', 'Fox', 'TFOX', '011.44.1343.729268', '1998-01-24', 'SA_REP', 9600, 0, 148, 80),
-(171, 'William', 'Smith', 'WSMITH', '011.44.1343.629268', '1999-02-23', 'SA_REP', 7400, 0, 148, 80),
-(172, 'Elizabeth', 'Bates', 'EBATES', '011.44.1343.529268', '1999-03-24', 'SA_REP', 7300, 0, 148, 80),
-(173, 'Sundita', 'Kumar', 'SKUMAR', '011.44.1343.329268', '2000-04-21', 'SA_REP', 6100, 0, 148, 80),
-(174, 'Ellen', 'Abel', 'EABEL', '011.44.1644.429267', '1996-05-11', 'SA_REP', 11000, 0, 149, 80),
-(175, 'Alyssa', 'Hutton', 'AHUTTON', '011.44.1644.429266', '1997-03-19', 'SA_REP', 8800, 0, 149, 80),
-(176, 'Jonathon', 'Taylor', 'JTAYLOR', '011.44.1644.429265', '1998-03-24', 'SA_REP', 8600, 0, 149, 80),
-(177, 'Jack', 'Livingston', 'JLIVINGS', '011.44.1644.429264', '1998-04-23', 'SA_REP', 8400, 0, 149, 80),
-(178, 'Kimberely', 'Grant', 'KGRANT', '011.44.1644.429263', '1999-05-24', 'SA_REP', 7000, 0, 149, NULL),
-(179, 'Charles', 'Johnson', 'CJOHNSON', '011.44.1644.429262', '2000-01-04', 'SA_REP', 6200, 0, 149, 80),
+(145, 'John', 'Russell', 'JRUSSEL', '011.44.1344.429268', '1996-10-01', 'SA_MAN', 14000, 0.3, 100, 80),
+(146, 'Karen', 'Partners', 'KPARTNER', '011.44.1344.467268', '1997-01-05', 'SA_MAN', 13500, 0.3, 100, 80),
+(147, 'Alberto', 'Errazuriz', 'AERRAZUR', '011.44.1344.429278', '1997-03-10', 'SA_MAN', 12000, 0.3, 100, 80),
+(148, 'Gerald', 'Cambrault', 'GCAMBRAU', '011.44.1344.619268', '1999-10-15', 'SA_MAN', 11000, 0.3, 100, 80),
+(149, 'Eleni', 'Zlotkey', 'EZLOTKEY', '011.44.1344.429018', '2000-01-29', 'SA_MAN', 10500, 0.3, 100, 80),
+(150, 'Peter', 'Tucker', 'PTUCKER', '011.44.1344.129268', '1997-01-30', 'SA_REP', 10000, 0.2, 145, 80),
+(151, 'David', 'Bernstein', 'DBERNSTE', '011.44.1344.345268', '1997-03-24', 'SA_REP', 9500, 0.2, 145, 80),
+(152, 'Peter', 'Hall', 'PHALL', '011.44.1344.478968', '1997-08-20', 'SA_REP', 9000, 0.2, 145, 80),
+(153, 'Christopher', 'Olsen', 'COLSEN', '011.44.1344.498718', '1998-03-30', 'SA_REP', 8000, 0.2, 145, 80),
+(154, 'Nanette', 'Cambrault', 'NCAMBRAU', '011.44.1344.987668', '1998-12-09', 'SA_REP', 7500, 0.2, 145, 80),
+(155, 'Oliver', 'Tuvault', 'OTUVAULT', '011.44.1344.486508', '1999-11-23', 'SA_REP', 7000, 0.2, 145, 80),
+(156, 'Janette', 'King', 'JKING', '011.44.1345.429268', '1996-01-30', 'SA_REP', 10000, 0.2, 146, 80),
+(157, 'Patrick', 'Sully', 'PSULLY', '011.44.1345.929268', '1996-03-04', 'SA_REP', 9500, 0.2, 146, 80),
+(158, 'Allan', 'McEwen', 'AMCEWEN', '011.44.1345.829268', '1996-08-01', 'SA_REP', 9000, 0.2, 146, 80),
+(159, 'Lindsey', 'Smith', 'LSMITH', '011.44.1345.729268', '1997-03-10', 'SA_REP', 8000, 0.2, 146, 80),
+(160, 'Louise', 'Doran', 'LDORAN', '011.44.1345.629268', '1997-12-15', 'SA_REP', 7500, 0.2, 146, 80),
+(161, 'Sarath', 'Sewall', 'SSEWALL', '011.44.1345.529268', '1998-11-03', 'SA_REP', 7000, 0.2, 146, 80),
+(162, 'Clara', 'Vishney', 'CVISHNEY', '011.44.1346.129268', '1997-11-11', 'SA_REP', 10500, 0.2, 147, 80),
+(163, 'Danielle', 'Greene', 'DGREENE', '011.44.1346.229268', '1999-03-19', 'SA_REP', 9500, 0.2, 147, 80),
+(164, 'Mattea', 'Marvins', 'MMARVINS', '011.44.1346.329268', '2000-01-24', 'SA_REP', 7200, 0.2, 147, 80),
+(165, 'David', 'Lee', 'DLEE', '011.44.1346.529268', '2000-02-23', 'SA_REP', 6800, 0.2, 147, 80),
+(166, 'Sundar', 'Ande', 'SANDE', '011.44.1346.629268', '2000-03-24', 'SA_REP', 6400, 0.2, 147, 80),
+(167, 'Amit', 'Banda', 'ABANDA', '011.44.1346.729268', '2000-04-21', 'SA_REP', 6200, 0.2, 147, 80),
+(168, 'Lisa', 'Ozer', 'LOZER', '011.44.1343.929268', '1997-03-11', 'SA_REP', 11500, 0.2, 148, 80),
+(169, 'Harrison', 'Bloom', 'HBLOOM', '011.44.1343.829268', '1998-03-23', 'SA_REP', 10000, 0.2, 148, 80),
+(170, 'Tayler', 'Fox', 'TFOX', '011.44.1343.729268', '1998-01-24', 'SA_REP', 9600, 0.2, 148, 80),
+(171, 'William', 'Smith', 'WSMITH', '011.44.1343.629268', '1999-02-23', 'SA_REP', 7400, 0.2, 148, 80),
+(172, 'Elizabeth', 'Bates', 'EBATES', '011.44.1343.529268', '1999-03-24', 'SA_REP', 7300, 0.2, 148, 80),
+(173, 'Sundita', 'Kumar', 'SKUMAR', '011.44.1343.329268', '2000-04-21', 'SA_REP', 6100, 0.2, 148, 80),
+(174, 'Ellen', 'Abel', 'EABEL', '011.44.1644.429267', '1996-05-11', 'SA_REP', 11000, 0.2, 149, 80),
+(175, 'Alyssa', 'Hutton', 'AHUTTON', '011.44.1644.429266', '1997-03-19', 'SA_REP', 8800, 0.2, 149, 80),
+(176, 'Jonathon', 'Taylor', 'JTAYLOR', '011.44.1644.429265', '1998-03-24', 'SA_REP', 8600, 0.2, 149, 80),
+(177, 'Jack', 'Livingston', 'JLIVINGS', '011.44.1644.429264', '1998-04-23', 'SA_REP', 8400, 0.2, 149, 80),
+(178, 'Kimberely', 'Grant', 'KGRANT', '011.44.1644.429263', '1999-05-24', 'SA_REP', 7000, 0.2, 149, NULL),
+(179, 'Charles', 'Johnson', 'CJOHNSON', '011.44.1644.429262', '2000-01-04', 'SA_REP', 6200, 0.2, 149, 80),
 (180, 'Winston', 'Taylor', 'WTAYLOR', '650.507.9876', '1998-01-24', 'SH_CLERK', 3200, NULL, 120, 50),
 (181, 'Jean', 'Fleaur', 'JFLEAUR', '650.507.9877', '1998-02-23', 'SH_CLERK', 3100, NULL, 120, 50),
 (182, 'Martha', 'Sullivan', 'MSULLIVA', '650.507.9878', '1999-06-21', 'SH_CLERK', 2500, NULL, 120, 50),
@@ -237,7 +237,7 @@ INSERT INTO `EMPLOYEES` (`EMPLOYEE_ID`, `FIRST_NAME`, `LAST_NAME`, `EMAIL`, `PHO
 -- --------------------------------------------------------
 
 --
--- 테이블 구조 `HR_JOBS`
+-- 테이블 구조 `JOBS`
 --
 
 CREATE TABLE IF NOT EXISTS `JOBS` (
@@ -249,7 +249,7 @@ CREATE TABLE IF NOT EXISTS `JOBS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 테이블의 덤프 데이터 `HR_JOBS`
+-- 테이블의 덤프 데이터 `JOBS`
 --
 
 INSERT INTO `JOBS` (`JOB_ID`, `JOB_TITLE`, `MIN_SALARY`, `MAX_SALARY`) VALUES
@@ -276,7 +276,7 @@ INSERT INTO `JOBS` (`JOB_ID`, `JOB_TITLE`, `MIN_SALARY`, `MAX_SALARY`) VALUES
 -- --------------------------------------------------------
 
 --
--- 테이블 구조 `HR_JOB_HISTORY`
+-- 테이블 구조 `JOB_HISTORY`
 --
 
 CREATE TABLE IF NOT EXISTS `JOB_HISTORY` (
@@ -292,7 +292,7 @@ CREATE TABLE IF NOT EXISTS `JOB_HISTORY` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 테이블의 덤프 데이터 `HR_JOB_HISTORY`
+-- 테이블의 덤프 데이터 `JOB_HISTORY`
 --
 
 INSERT INTO `JOB_HISTORY` (`EMPLOYEE_ID`, `START_DATE`, `END_DATE`, `JOB_ID`, `DEPARTMENT_ID`) VALUES
@@ -310,7 +310,7 @@ INSERT INTO `JOB_HISTORY` (`EMPLOYEE_ID`, `START_DATE`, `END_DATE`, `JOB_ID`, `D
 -- --------------------------------------------------------
 
 --
--- 테이블 구조 `HR_LOCATIONS`
+-- 테이블 구조 `LOCATIONS`
 --
 
 CREATE TABLE IF NOT EXISTS `LOCATIONS` (
@@ -325,7 +325,7 @@ CREATE TABLE IF NOT EXISTS `LOCATIONS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 테이블의 덤프 데이터 `HR_LOCATIONS`
+-- 테이블의 덤프 데이터 `LOCATIONS`
 --
 
 INSERT INTO `LOCATIONS` (`LOCATION_ID`, `STREET_ADDRESS`, `POSTAL_CODE`, `CITY`, `STATE_PROVINCE`, `COUNTRY_ID`) VALUES
@@ -356,7 +356,7 @@ INSERT INTO `LOCATIONS` (`LOCATION_ID`, `STREET_ADDRESS`, `POSTAL_CODE`, `CITY`,
 -- --------------------------------------------------------
 
 --
--- 테이블 구조 `HR_REGIONS`
+-- 테이블 구조 `REGIONS`
 --
 
 CREATE TABLE IF NOT EXISTS `REGIONS` (
@@ -366,7 +366,7 @@ CREATE TABLE IF NOT EXISTS `REGIONS` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- 테이블의 덤프 데이터 `HR_REGIONS`
+-- 테이블의 덤프 데이터 `REGIONS`
 --
 
 INSERT INTO `REGIONS` (`REGION_ID`, `REGION_NAME`) VALUES
@@ -380,20 +380,20 @@ INSERT INTO `REGIONS` (`REGION_ID`, `REGION_NAME`) VALUES
 --
 
 --
--- Constraints for table `HR_COUNTRIES`
+-- Constraints for table `COUNTRIES`
 --
 ALTER TABLE `COUNTRIES`
   ADD CONSTRAINT `COUNTR_REF_FK` FOREIGN KEY (`REGION_ID`) REFERENCES `REGIONS` (`REGION_ID`);
 
 --
--- Constraints for table `HR_DEPARTMENTS`
+-- Constraints for table `DEPARTMENTS`
 --
 ALTER TABLE `DEPARTMENTS`
   ADD CONSTRAINT `DEPT_LOC_FK` FOREIGN KEY (`LOCATION_ID`) REFERENCES `LOCATIONS` (`LOCATION_ID`),
   ADD CONSTRAINT `DEPT_MGR_FK` FOREIGN KEY (`MANAGER_ID`) REFERENCES `EMPLOYEES` (`EMPLOYEE_ID`);
 
 --
--- Constraints for table `HR_EMPLOYEES`
+-- Constraints for table `EMPLOYEES`
 --
 ALTER TABLE `EMPLOYEES`
   ADD CONSTRAINT `EMP_DEPT_FK` FOREIGN KEY (`DEPARTMENT_ID`) REFERENCES `DEPARTMENTS` (`DEPARTMENT_ID`),
@@ -401,7 +401,7 @@ ALTER TABLE `EMPLOYEES`
   ADD CONSTRAINT `EMP_MANAGER_FK` FOREIGN KEY (`MANAGER_ID`) REFERENCES `EMPLOYEES` (`EMPLOYEE_ID`);
 
 --
--- Constraints for table `HR_JOB_HISTORY`
+-- Constraints for table `JOB_HISTORY`
 --
 ALTER TABLE `JOB_HISTORY`
   ADD CONSTRAINT `JHIST_DEPT_FK` FOREIGN KEY (`DEPARTMENT_ID`) REFERENCES `DEPARTMENTS` (`DEPARTMENT_ID`),
@@ -409,7 +409,7 @@ ALTER TABLE `JOB_HISTORY`
   ADD CONSTRAINT `JHIST_JOB_FK` FOREIGN KEY (`JOB_ID`) REFERENCES `JOBS` (`JOB_ID`);
 
 --
--- Constraints for table `HR_LOCATIONS`
+-- Constraints for table `LOCATIONS`
 --
 ALTER TABLE `LOCATIONS`
   ADD CONSTRAINT `LOC_C_ID_FK` FOREIGN KEY (`COUNTRY_ID`) REFERENCES `COUNTRIES` (`COUNTRY_ID`);
